@@ -1,0 +1,90 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:India Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN=Latha Priyanka Gunturi:mailto:lathapriyanka.gunturi@infobellit
+ .com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=sahiltitto
+ 1120@gmail.com:mailto:sahiltitto1120@gmail.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=sahishnavi
+ :mailto:sahishnavi@infobellit.com
+DESCRIPTION;LANGUAGE=en-US:Hai Sahil Titto\,\n\n\n\nPlease confirm the acce
+ ptance of virtual meeting.\n\n\n\nGuidelines:\nPlease join the interview u
+ sing Laptop/Desktop\nEnable the video during the interview\nTake interview
+  from calm and undisturbing place.\n\n\n\n\n______________________________
+ __________________________________________________\nMicrosoft Teams Need h
+ elp?<https://aka.ms/JoinTeamsMeeting?omkt=en-US>\nJoin the meeting now<htt
+ ps://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDVhOGRkMjYtOGM1Ny00ZT
+ BmLTkzYjItNzJjNzM0ZTIwODZi%40thread.v2/0?context=%7b%22Tid%22%3a%22e8f254c
+ a-58a4-4463-a209-75bd0ddb57b4%22%2c%22Oid%22%3a%221e893ea2-4f02-45aa-a025-
+ 293dba2b19e4%22%7d>\nMeeting ID: 417 354 472 57\nPasscode: ifz4x9\n_______
+ _________________________\nFor organizers: Meeting options<https://teams.m
+ icrosoft.com/meetingOptions/?organizerId=1e893ea2-4f02-45aa-a025-293dba2b1
+ 9e4&tenantId=e8f254ca-58a4-4463-a209-75bd0ddb57b4&threadId=19_meeting_ZDVh
+ OGRkMjYtOGM1Ny00ZTBmLTkzYjItNzJjNzM0ZTIwODZi@thread.v2&messageId=0&languag
+ e=en-US> | Reset dial-in PIN<https://dialin.teams.microsoft.com/usp/pstnco
+ nferencing>\n_____________________________________________________________
+ ___________________\n
+UID:040000008200E00074C5B7101A82E008000000004B3D9A41F48EDA01000000000000000
+ 01000000034CDC6D2180DE949B14C0A3FE53B6144
+SUMMARY;LANGUAGE=en-US:Infobell IT Technical_Interview
+DTSTART;TZID=India Standard Time:20240416T150000
+DTEND;TZID=India Standard Time:20240416T153000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20240415T051751Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=en-US:Microsoft Teams Meeting
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:2122611275
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-ONLINEMEETINGINFORMATION:{"OnlineMeetingChannelId":null\,"Onlin
+ eMeetingProvider":3}
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_ZDVhOGRkMjYtOGM1Ny00ZTBmLTkzYjItNzJjNzM0ZTIwODZi%40thread.v2/
+ 0?context=%7b%22Tid%22%3a%22e8f254ca-58a4-4463-a209-75bd0ddb57b4%22%2c%22O
+ id%22%3a%221e893ea2-4f02-45aa-a025-293dba2b19e4%22%7d
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/e8f254ca-58a4-4463-a209-75bd0ddb57b4/1e893ea2-4f02-45aa-a025-2
+ 93dba2b19e4/19_meeting_ZDVhOGRkMjYtOGM1Ny00ZTBmLTkzYjItNzJjNzM0ZTIwODZi@th
+ read.v2/0
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_ZDVhOGRkMjYtOGM1Ny00ZTB
+ mLTkzYjItNzJjNzM0ZTIwODZi@thread.v2"\,"rid":0\,"mid":0\,"uid":null\,"priva
+ te":true\,"type":0}
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:TRUE
+X-MICROSOFT-LOCATIONDISPLAYNAME:Microsoft Teams Meeting
+X-MICROSOFT-LOCATIONSOURCE:None
+X-MICROSOFT-LOCATIONS:[{"DisplayName":"Microsoft Teams Meeting"\,"LocationA
+ nnotation":""\,"LocationUri":""\,"LocationStreet":""\,"LocationCity":""\,"
+ LocationState":""\,"LocationCountry":""\,"LocationPostalCode":""\,"Locatio
+ nFullAddress":""}]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR

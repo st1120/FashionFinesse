@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Footwear{% endblock %} {% block content %}
+<br><br>
+<h1 align="center">More Footwears</h1><br><br>
+<div style="display: flex; overflow: auto;">
+<form> 
+    <div class="image-container" style="margin-left: 20px;">
+        {% if event=="Wedding" and gender=="Men" %}
+            {% for image_path in foot_images %}
+                <img src="{{ url_for('static', filename='dataset/'+event+'/'+gender+'/men-traditional/Footwear/'+image_path) }}" height="auto" style="margin: 30px;" width="300px" alt="{{ image_name }}" >
+    
+            {% endfor %}
+        {% elif event=="Wedding" and gender=="Women" %}
+            {% for image_path in foot_images %}
+                
+                <img src="{{ url_for('static', filename='dataset/'+event+'/'+gender+'/churidar/Footwear/'+image_path) }}" height="auto" style="margin: 30px;" width="300px" alt="{{ image_name }}" >
+                
+            {% endfor %}
+        {% else %}
+            {% for image_path in foot_images %}
+                <img src="{{ url_for('static', filename='dataset/'+event+'/'+gender+'/Footwear/'+image_path) }}" height="auto" width="300px" style="margin: 30px;" alt="{{ image_name }}" >
+            {% endfor %}
+        {% endif %}
+    </div>
+</form>
+</div>
+
+
+{% endblock %}

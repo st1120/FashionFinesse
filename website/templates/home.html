@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<br>
+<h1 align="center"><i>FashionFinesse</i></h1><br><br>  
+
+<form method="POST" action="{{ url_for('views.submit') }}">
+  <div class="form-group">
+    <label for="gender"><b>GENDER</b></label>
+    <select class="form-control" id="gender" name="gender" placeholder="Select Gender">
+      <option value="gender0">--Select Gender--</option>
+      <option value="Men">Male</option>
+      <option value="Women">Female</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="events"><b>EVENT</b></label>
+    <select class="form-control" id="events" name="events" placeholder="Select Event">
+      <option value="event0">--Select Event--</option>
+      <option value="Beach">Beach</option>
+      <option value="Concert">Concert/Music Festival</option>
+      <option value="Dinner Date">Dinner Date Night</option>
+      <option value="Fitness">Fitness/Gym</option>
+      <option value="Halloween">Halloween Party</option>
+      <option value="Professional">Professional Meetings/Job Interviews</option>
+      <option value="Sports">Sporting Events</option>
+      <option value="Wedding">Wedding Celebrations</option>
+    </select>
+  </div><br>
+
+  <div class="form-group">
+    <label for="color"><b>COLOR</b></label>
+    <select class="form-control" id="color" name="color" placeholder="Select Color">
+      <option value="color0">--Select Color--</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+      <option value="black">Black</option>
+      <option value="white">White</option>
+      <option value="pink">Pink</option>
+    </select>
+  </div>
+
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </div>
+</form>
+
+<br><br><br>
+
+
+<div>
+  <h1>OUTFITS</h1><br><br>
+  <div style="display: flex; overflow: auto;">
+    {% for image_name in image_names %}
+      <form method="POST" action="{{ url_for('views.image_click', image_path=image_name, event=event, gender=gender) }}">
+        <div class="image-container" style="margin-left: 30px;">
+          <img src="{{ url_for('static', filename='dataset/' + event + '/' + gender + '/' + image_name) }}" height="400px" width="auto" alt="{{ image_name }}"><br>
+          <button type="submit" style="padding: 10px; margin-top: 30px; margin-left: 13vh; background-color: black; color: white; border-radius: 5%;" class="show-similar-btn">Show Similar</button>
+        </div>
+      </form>
+    {% endfor %}
+  </div>
+</div>
+
+<br><br><br>
+
+<div>
+  <h1>ACCESSORIES</h1><br><br>
+  <form method="POST" action="{{ url_for('views.accessories', event=event, gender=gender) }}">
+    <div style="display: flex; overflow: auto;">
+      {% for acc_name in acc_names %}
+        <div class="image-container" style="margin-left: 30px;">
+          <img src="{{ url_for('static', filename='dataset/' + event + '/' + gender + '/Accessories/' + acc_name) }}" height="auto" width="200px" alt="{{ acc_name }}">    
+        </div>
+      {% endfor %}
+    </div><br>
+    <button type="submit" style="padding: 10px; margin-left: 70vh; margin-top: 5vh; background-color: black; color: white; border-radius: 5%;">Show More</button>
+  </form>
+</div>
+
+<br><br><br>
+
+<div>
+  <h1>FOOTWEAR</h1><br><br>
+  <form method="POST" action="{{ url_for('views.footwear', event=event, gender=gender) }}">
+    <div style="display: flex; overflow: auto;">
+      {% for foot_name in foot_names %}
+        <div class="image-container" style="margin-left: 30px;">
+          <img src="{{ url_for('static', filename='dataset/' + event + '/' + gender + '/Footwear/' + foot_name) }}" height="auto" width="200px" alt="{{ foot_name }}">
+        </div>
+      {% endfor %}
+    </div><br>
+    <button type="submit" style="padding: 10px; margin-left: 34vw; margin-top: 5vh; margin-bottom: 5vh; background-color: black; color: white; border-radius: 5%;">Show More</button>
+  </form>
+</div>
+</>
+
+{% endblock %}
