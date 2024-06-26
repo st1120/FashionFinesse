@@ -1,4 +1,4 @@
-# Flask Web App Tutorial
+# Fashion Finesse- A complete Fashion Guide
 
 ## Setup & Installation
 
@@ -11,6 +11,10 @@ git clone <repo-url>
 ```bash
 pip install -r requirements.txt
 ```
+
+## Dataset URL
+
+https://drive.google.com/drive/folders/182lvbxKsspt2kNcUfH5BeCXmBFb_sjGX?usp=sharing
 
 ## Running The App
 
